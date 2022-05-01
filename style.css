@@ -123,6 +123,7 @@ ul li a:hover{
     align-items: center;
     justify-content: center;
     padding: 20px;
+    transition-delay: 1s;
     z-index: 10;
     cursor: pointer;
 }
@@ -213,7 +214,8 @@ p a{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(./image/signup_background.jpg);
+    /* background: linear-gradient(to bottom,#64faed,#d968d3); */
+    background-image: url(./image/solid-navy-blue-concrete-textured-wall.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -222,8 +224,9 @@ p a{
    width: 700px;
    height: auto;
    box-shadow: 1px 1px 5px 1px;
-   background-color: rgba(130, 122, 122, 0.1);
-   padding: 30px;
+   background-color: rgba(255, 255, 255, 0.1);
+   padding : 30px;
+ 
 }
 #signup_btn{
     color: black!important;
@@ -233,7 +236,23 @@ p a{
     width: 100px;
     padding: 10px;
 }
-
+center{
+    position: absolute;
+    top: 10%;
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+}
+center::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 90px;
+    height: 4px;
+    border-radius: 5px;
+    background: #fff;
+}
 
 
 
