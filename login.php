@@ -1,6 +1,5 @@
 <?php
-    session_start();
-    include './connect.php';
+    
     if(isset($_POST['login']) && !empty($_POST['login'])){
         $email = $_POST['email'];
         $password = $_POST['password'];
@@ -24,11 +23,11 @@
             <form method="POST">
                 <div class="email">
                 <h4>Email</h4>
-                <input type="email" placeholder="User Mail" name="email" autocomplete="off">
+                <input ondragenter="" type="email" placeholder="User Mail" name="email" autocomplete="off" required>
                 </div>
                 <div class="email">
                 <h4>Password</h4>
-                <input type="password" placeholder="Password" name="password">
+                <input type="password" placeholder="Password" name="password" required>
                 </div>
                 <input type="submit" value="Login" name="login">
             </form>

@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include '/vignesh/xampp/htdocs/Final_Year_Project/connect.php';
     if(isset($_POST['submit']) && !empty($_POST['submit'])){
         $image1 = $_FILES['image1'];
@@ -241,7 +242,6 @@
         <?php  
             $sqli = "select * from place_detail";
             $resulted = mysqli_query($con,$sqli);
-            
             while($row = mysqli_fetch_assoc($resulted)){
                 $img1 = $row['image1'];
                 $img2 = $row['image2'];
@@ -264,10 +264,10 @@
                     </div>
                   </div>
             </section>
-                <h4>'.$cityname.'</h4>
+            <a href="./admin_operation.php?city='.$cityname.'"> <h4>'.$cityname.'</h4></a>
                 </div>';
+               
             }
-        
         ?>
      
     </div>

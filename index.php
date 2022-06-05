@@ -14,11 +14,9 @@
 </head>
 <body>
     <!-- adminlogin -->
-  
-    
-
+    <?php include './admin_login.php'; ?>
     <!-------------login---------------->
-    <?php include './login.php'  ?>
+    <?php include './login.php';  ?>
 
     <!---------header------------->
     <section class="header"> 
@@ -27,32 +25,44 @@
             <li><a class = "nav_style" href="/">Home</a></li>
             <li><a class = "nav_style" href="/">About</a></li>
             <li><a class = "nav_style" href="/">Contact</a></li>
-            <li><a class="btn_style" id="adminbutton" href="admin_login.php">Admin login</a></li>
+            <li><a class="btn_style" id="adminbutton" onclick="adminlogin()">Admin login</a></li>
             <li><a href="./register.php" class="btn_style">Sign up</a></li>
             <li><a class="btn_style" onclick="login()">Login</a></li>
         </ul>
     </section>
-    <script>
-        let adminlogin = document.getElementById("adminlogin");
-        let adminbutton = document.getElementById("adminbutton");
-        adminbutton.addEventListener('onclick',function(){
-            adminlogin.style.display="block";
-        })
-    </script>
+   
         <!-- admin login -->
+
+        <script>
+            let admin = document.getElementById("adminlogin");
+            function adminlogin(){
+           admin.style.top = "0";
+        }
+    
+        function adminClose(){
+            admin.style.top ="-100%";
+        }
+        window.onclick = function(event){
+            if(event.target == admin){
+                admin.style.top = "-100%";
+            }
+        }
+        </script>
+
+        <!-- user lpgin -->
     <script>
          let login1 = document.getElementById("login");
          
           function login(){
-           login1.style.display="flex";
+           login1.style.top = "0";
         }
     
         function onClose(){
-            login1.style.display ="none";
+            login1.style.top ="-100%";
         }
         window.onclick = function(event){
             if(event.target == login1){
-                login1.style.display = "none";
+                login1.style.top = "-100%";
             }
         }
       
